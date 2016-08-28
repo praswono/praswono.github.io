@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Praswono.GitHub.io by praswono</title>
+        <meta name="description" content="Hacktiv8 adalah sebuah pelatihan coding fulltime di Jakarta yang membantu pemula untuk menjadi fullstack developer dalam 12 minggu.">
+        <meta name="keywords" content="hacktiv8, coding, bootcamp, javascript, web, developer">
+        <meta name="author" content="Hacktiv8 Team">
+        <link href="styles/index.css" rel="stylesheet" type="text/css" media="screen">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    </head>
+    <body>
+		<button id="change-style" style="font-size:60px;">Test</button>
+    </body>
+    <script language="Javascript" type="text/javascript">
+    	function makeBold() {
+    		$("#change-style").css("font-style","normal");
+    		$("#change-style").css("font-weight","bold");
+    	}
+
+    	function makeItalic() {
+    		$("#change-style").css("font-style","italic");
+    		$("#change-style").css("font-weight","normal");
+    	}
+
+		$(document).ready(function() {
+			$("#change-style").on("click", function() {
+				makeBold();
+			});
+
+			$("#change-style").on("contextmenu", function() {
+				makeItalic();
+				return false;
+			});
+		});
+	</script>
+</html>

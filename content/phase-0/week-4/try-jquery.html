@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Praswono.GitHub.io by praswono</title>
+        <meta name="description" content="Hacktiv8 adalah sebuah pelatihan coding fulltime di Jakarta yang membantu pemula untuk menjadi fullstack developer dalam 12 minggu.">
+        <meta name="keywords" content="hacktiv8, coding, bootcamp, javascript, web, developer">
+        <meta name="author" content="Hacktiv8 Team">
+        <link href="styles/index.css" rel="stylesheet" type="text/css" media="screen">
+    </head>
+    <body>
+    	<p id="text">Tulisan Di Klik Jadi Merah</p>
+		<script src="https://code.jquery.com/jquery-3.1.0.min.js" integrity="sha256-cCueBR6CsyA4/9szpPfrX3s49M9vUU5BgtiJj06wt/s=" crossorigin="anonymous"></script>
+    </body>
+    <script language="Javascript" type="text/javascript">
+		$(document).ready(function() {
+			var i = 1;
+			$("#text").click(function() {
+				if (i === 1) {
+					$(this).css("color", "red");
+					$(this).html("WOI JANGAN DI KLIK WOI");
+					i++;
+				} else if (i === 2) {
+					$(this).css("color", "red");
+					$(this).html("SERIUS JANGAN KLIK");
+					i++;
+				} else if (i === 3) {
+					$(this).css("color", "red");
+					$(this).html("GW KABUR YA");
+					i++;
+				} else if (i === 4) {
+					$(this).css({"color": "orange", "font-size": "0.95em"});
+					$(this).html("Liat ni gw kabur");
+					i++;
+				} else if (i === 5) {
+					$(this).css({"color": "orange", "font-size": "0.9em"});
+					$(this).html("Ni makin lama makin kecil");
+					i++;
+				} else if (i === 6) {
+					$(this).css({"color": "orange", "font-size": "0.8em"});
+					$(this).html("ok gw kabur dulu");
+					i++;
+				} else if (i === 7) {
+					$(this).css({"color": "orange", "font-size": "0.7em"});
+					$(this).html("dasar masih di klik terus");
+					i++;
+				} else if (i === 8) {
+					$(this).css({"color": "red", "font-size": "0.65em"});
+					$(this).html("serius woi");
+					i++;
+				} else if (i === 9) {
+					$(this).css({"color": "red", "font-size": "3em"});
+					$(this).html("WOIIIII");
+					i++;
+				} else if (i === 10) {
+					$(this).css({"color": "red", "font-size": "1em"});
+					$(this).html("Yauda deh");
+					i = 1;
+				}
+			});
+		});
+	</script>
+</html>
+
+

@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Praswono.GitHub.io by praswono</title>
+        <meta name="description" content="Hacktiv8 adalah sebuah pelatihan coding fulltime di Jakarta yang membantu pemula untuk menjadi fullstack developer dalam 12 minggu.">
+        <meta name="keywords" content="hacktiv8, coding, bootcamp, javascript, web, developer">
+        <meta name="author" content="Hacktiv8 Team">
+        <link href="../styles/index.css" rel="stylesheet" type="text/css" media="screen">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+    </head>
+    <body>
+    	<button id="previous">Previous</button>
+    	<img src="images/spongebob.jpg" id="image">
+    	<button id="next">Next</button>
+
+    	<script src="https://code.jquery.com/jquery-3.1.0.slim.min.js" integrity="sha256-cRpWjoSOw5KcyIOaZNo4i6fZ9tKPhYYb6i5T9RSVJG8="   crossorigin="anonymous"></script>
+        <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    </body>
+    <script language="Javascript" type="text/javascript">
+		$(document).ready(function() {
+
+			var currentIndex = 0;
+			var currentImage;
+			$("#previous").css("visibility", "hidden");
+			
+			$("#previous").on("click", function() {
+				currentIndex--;
+				if (currentIndex === 0) {
+					$("#image").attr("src", "images/spongebob.jpg");
+					$(this).css("visibility", "hidden");
+				} else if (currentIndex === 1) {
+					$("#image").attr("src", "images/patrick.jpg");
+					$("#next").css("visibility", "visible");
+				}
+
+				currentImage = $("#image").attr("src").split("/").pop();
+				console.log("currentImage: " + currentImage);
+				console.log("currentIndex: " + currentIndex);
+			});
+
+			$("#next").on("click", function() {
+				currentIndex++;
+				if (currentIndex === 1) {
+            		$("#image").attr("src", "images/patrick.jpg");
+					$("#previous").css("visibility", "visible");
+				} else if (currentIndex === 2) {
+					$("#image").attr("src", "images/squidward.jpg");
+					$(this).css("visibility","hidden");
+				}
+
+				currentImage = $("#image").attr("src").split("/").pop();
+				console.log("currentImage: " + currentImage);
+				console.log("currentIndex: " + currentIndex);
+			});
+		});
+	</script>
+</html>
+
+
