@@ -17,7 +17,7 @@
 #head .title {
   font-family: Alice, Georgia, serif;
   font-size: 49px;
-  font-size: 3.0625rem;
+  font-size: 4rem;
 }
 
 #head .title a {
@@ -28,7 +28,6 @@
 #head .tagline {
   display: block;
   font-size: 14px;
-  font-size: 0.875rem;
   line-height: 1.2em;
   color: #7C7C7C;
   margin: 5px 0 0;
